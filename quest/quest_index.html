@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Shadow Quest</title>
+
+        <link rel="stylesheet" href="quest_style.css">
+    </head>
+
+    <body>
+
+        <main id="questApp">
+
+            <!-------------------Header------------------->
+
+            <header class="questHeader">
+                <div class="brand">SHADOW QUEST</div>
+
+                <button id="exitButton" class="exitButton">
+                    I need to come back to the room
+                </button>
+            </header>
+
+            <!-----------------Quest Map------------------->
+
+            <nav class="questMap" aria-label="Quest progress">
+
+                <div class="mapStep active" data-step="1">
+                    <small>Threshold</small>
+                </div>
+
+                <div class="mapLine"></div>
+
+                <div class="mapStep" data-step="2">
+                    <small>Surface</small>
+                </div>
+
+                <div class="mapLine"></div>
+
+                <div class="mapStep" data-step="3">
+                    <small>Figure</small>
+                </div>
+
+                <div class="mapLine"></div>
+
+                <div class="mapStep" data-step="4">
+                    <small>Dialogue</small>
+                </div>
+
+                <div class="mapLine"></div>
+
+                <div class="mapStep" data-step="5">
+                    <small>Reframe</small>
+                </div>
+
+                <div class="mapLine"></div>
+
+                <div class="mapStep" data-step="6">
+                    <small>Integrate</small>
+                </div>
+
+                <div class="mapLine"></div>
+
+                <div class="mapStep" data-step="7">
+                    <small>Seal</small>
+                </div>
+
+            </nav>
+
+            <!-----------------Quest Content------------------->
+
+            <section id="questContent">
+
+                <!------Threshold------>
+
+                <div class="questScreen active"  data-screen="1">
+
+                    <span class="eyebrow">Threshold</span>
+
+                    <h1>Before we begin, arrive here.</h1>
+
+                    <p>
+                        Take one slow breath.
+                        Let the rest of the room become quieter for a moment.
+                    </p>
+
+                    <div class="ritual">
+
+                        <div class="ritualCircle"></div>
+                        <span>One breath</span>
+                    </div>
+
+                    <button class="continueButton" data-next="2">
+                        I'm here
+                    </button>
+                </div>
+
+                <!------Surface------>
+
+                <div class="questScreen" data-screen="2">
+
+                    <span class="eyebrow">Surface the charge</span>
+
+                    <h1>What feels alive right now?</h1>
+
+                    <p>
+                        You don't need to explain it perfectly.
+                        Just choose what feels closest.
+                    </p>
+
+                    <div class="choiceGrid">
+
+                        <button class="choiceButton">Anxiety</button>
+                        <button class="choiceButton">Anger</button>
+                        <button class="choiceButton">Sadness</button>
+                        <button class="choiceButton">Uncertainty</button>
+                    </div>
+
+                    <button class="continueButton hidden" data-next="3">
+                        Continue
+                    </button>
+
+                </div>
+
+                <!------Externalize------>
+
+                <div class="questScreen" data-screen="3">
+
+                    <span class="eyebrow">Externalize</span>
+                    <h1>Give it a form.</h1>
+                    <p>
+                        If this feeling could stand outside you,
+                        what would you call the figure carrying it?
+                    </p>
+
+                    <input 
+                        type="text"
+                        id="figureInput"
+                        class="questInput"
+                        placeholder="Name the Shadow Figure"
+                        maxlength="40"
+                        autocomplete="off" >
+
+                    <button 
+                        class="continueButton"
+                        id="figureContinue"
+                        data-next="4"
+                        disabled>
+                        Give it a name
+                    </button>
+
+                </div>
+
+                <!------Dialogue------>
+
+                <div class="questScreen" data-screen="4">
+
+                    <span class="eyebrow">Dialogue</span>
+                    <h1>Sit with the figure.</h1>
+
+                    <div class="dialogueBox">
+                        <div class="message guide">
+
+                            <span>Guide</span>
+                            <p>
+                                What does this figure seem to 
+                                want you to notice?
+                            </p>
+                        </div>
+
+                        <div class="message figure">
+
+                            <span id="figureName">The Figure</span>
+                            <p>
+                                I've been trying to protect something
+                                you haven't had words for yet.
+                            </p>
+                        </div>
+
+                        <div class="message guide">
+
+                            <span>Guide</span>
+                            <p>
+                                You can listen without having to obey.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <button class="continueButton" data-next="5">
+                        Continue
+                    </button>
+                </div>
+
+                <!------Reframe------>
+
+                <div class="questScreen" data-screen="5">
+
+                    <span class="eyebrow">Reframe</span>
+                    <h1>Perhaps the feeling is not your enemy.</h1>
+                    <p>
+                        Sometimes what first appears as fear, anger, or
+                        uncertainty is also trying to point toward a need.
+                    </p>
+
+                    <div class="reflectionCard">
+
+                        <span>A gentler reading</span>
+                        <p>"Something in me is asking to be understood."</p>
+                    </div>
+
+                    <button class="continueButton" data-next="6">
+                        Carry this forward
+                    </button>
+                </div>
+
+                <!------Integration------>
+
+                <div class="questScreen" data-screen="6">
+
+                    <span class="eyebrow">Integration</span>
+                    <h1>What will you carry into the next hour?</h1>
+                    <p>Choose one small action.</p>
+
+                    <div class="choiceGrid">
+
+                        <button class="integrationChoice">
+                            Give myself some quiet 
+                        </button>
+
+                        <button class="integrationChoice">
+                            Write one honest sentence
+                        </button>
+
+                        <button class="integrationChoice">
+                            Speak gently to myself
+                        </button>
+                    </div>
+                    
+                    <button class="continueButton hidden" data-next="7">
+                        Make this my intention
+                    </button>
+
+                </div>
+
+                <!------Seal------>
+
+                <div class="questScreen" data-screen="7">
+
+                    <span class="eyebrow">Seal</span>
+                    <h1>You can leave the room changed by one
+                        small thing.
+                    </h1>
+                    <p>The figure you met has been placed on 
+                        your private Psyche Map.
+                    </p>
+
+                    <div class="sealCard">
+
+                        <div class="figureSymbol">
+                            ✦
+                        </div>
+
+                        <div>
+
+                            <span id="finalFigureName">Shadow Figure</span>
+                            <p id="finalEmotion">A figure you choose to meet</p>
+                            
+                        </div>
+
+                    </div>
+
+                    <button id="mapButton" class="continueButton">
+                        Open Psyche Map
+                    </button>
+
+                </div>
+                
+            </section>
+
+            <!------Psyche Map------>
+
+            <section id="psycheMap" class="mapView">
+
+                <span class="eyebrow">Your Psyche Map</span>
+                <h1>Figures you've met.</h1>
+                <p>
+                    A private cartography of moments
+                    you've chosen to notice.
+                </p>
+
+                <div class="figureList">
+
+                    <div class="mapFigure">
+
+                        <div class="figureSymbol">
+                            ✦
+                        </div>
+
+                        <div>
+
+                            <strong>Restlessness</strong>
+                            <p>A figure met before.</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="mapFigure">
+
+                        <div class="figureSymbol">
+                            ✦
+                        </div>
+                        
+                        <div >
+
+                            <strong id="mapFigureName">
+                                Your new figure
+                            </strong>
+
+                            <p id="mapFigureEmotion">
+                                Met during this Quest.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button id="returnButton" class="continueButton">
+                    Return to the room
+                </button>
+
+            </section>
+
+            <!------Exit------>
+
+            <section id="exitScreen" class="exitScreen">
+
+                <span class="eyebrow">Quest paused</span>
+                <h1>You're back in the room.</h1>
+                <p>
+                    Nothing needs to be finished right now.
+                    You can return whenever you're ready.
+                </p>
+
+                <button id="restartButton" class="continueButton">
+                    Begin again
+                </button>
+
+            </section>
+
+        </main>
+
+        <script src="quest_script.js"></script>
+
+    </body>
+</html>
