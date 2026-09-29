@@ -2,6 +2,24 @@
 
 Shadow Quest is a web experience designed to help users explore their feelings. It's built around a calm, reflective guided Quest experience.
 
+## Approach
+
+I approached Shadow Quest by focusing on a calm, reflective user experience with a minimal and dark visual design. I well organized the files of project and the files contain a lot of comments so making any change can be done efficiently.
+
+## Assumptions
+
+The waitlist is a frontend demonstration and does not store emails.
+The Psyche Map is only stored during the current session.
+The Quest is a reflective experience, not a diagnostic or therapeutic tool.
+
+## What I'd Do Next
+
+With more time, I would like to learn how to store waitlist emails and save the figures added to the Psyche Map so they remain available when users return. I would also like to improve the design based on testing on different devices and browsers, and learn more about making the experience accessible to different users.
+
+## Time Spent
+
+Approximately 30–33 hours of active work, including design, implementation, testing, iteration, deployment, and documentation.
+
 ## Features
 
 Landing Page: Allows users to join the Shadow Quest waitlist.
@@ -14,18 +32,6 @@ Guided Quest: A responsive, seven-stage experience with a calm and reflective in
 5.Reframe
 6.Integrate
 7.Seal, Psyche Map
-
-## Time Spent
-
-Approximately 30–33 hours of active work, including design, implementation, testing, iteration, deployment, and documentation.
-
-## Approach
-
-I approached Shadow Quest by focusing on a calm, reflective user experience with a minimal and dark visual design. I well organized the files of project and the files contain a lot of comments so making any change can be done efficiently.
-
-## What I'd Do Next
-
-With more time, I would like to learn how to store waitlist emails and save the figures added to the Psyche Map so they remain available when users return. I would also like to improve the design based on testing on different devices and browsers, and learn more about making the experience accessible to different users.
 
 ## Technologies Used
 
