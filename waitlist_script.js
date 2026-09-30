@@ -29,6 +29,7 @@ waitlist_form.addEventListener("submit",function (event) {
         message.innerHTML =
             `
             You're on the waitlist.
+            
             <a href="quest/quest_index.html" class="questLink">
                 Enter the Quest →
             </a>
